@@ -6,6 +6,8 @@ package ca.bravodelta.kodimata
 public class Controller {
     private final Map<Integer, Closure> pinsToActions = new LinkedHashMap<>();
 
+    // TODO: the "action" seems too broad and arbitrary:
+    // can we restrict to interface members of MediaPlayer for the associated instance?
     public void configureButton(final int pinId, final Closure action) {
         pinsToActions.put(pinId, action);
     }
