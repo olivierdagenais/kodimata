@@ -15,5 +15,4 @@ public class ProgramTest {
     @Test public void main_doesNotThrow() {
         Program.main();
     }
-
 }

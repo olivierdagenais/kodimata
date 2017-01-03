@@ -4,12 +4,14 @@
 package ca.bravodelta.kodimata
 
 public class Controller {
+    private final Map<Integer, Closure> pinsToActions = new LinkedHashMap<>();
 
     public void configureButton(final int pinId, final Closure action) {
-        // TODO: Record button configuration
+        pinsToActions.put(pinId, action);
     }
 
     public void buttonPressed(final int pinId) {
-        // TODO: execute corresponding action
+        final action = pinsToActions.get(pinId)
+        action();
     }
 }
